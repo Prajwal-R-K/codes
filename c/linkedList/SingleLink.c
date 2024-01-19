@@ -1,34 +1,3 @@
-//#include<stdio.h>
-#include<stdbool.h>
-//void main(){
-/*
-    int a=printf("Hello");//Value of a will be no. of characters in string
-    printf("\n %d",a);
-    
-    int (*p)[5];//Creates an array p of pointers.
-    *p[0]=1;
-    printf("\n%d\n",*p[0]);
-
-    printf(5+"Test_Quiz");//print  the string after 5 characters of given String.
-
-    char b[20]="gyug";
-    printf("\n%d",sizeof(b));
-    
-int i=1;
-for( ; ; )
-{
-    printf("\n%d ",i++);
-    if(i>10);
-    break;
-}
-bool aa=true;
-printf("\n%d",aa);          */
-
-/*
-char greetings[] = "Hello World!";
-printf("%c", greetings[0]);
-
-}*/
 #include<stdio.h>
 #include<stdlib.h>
 struct sllist{
@@ -36,6 +5,7 @@ struct sllist{
     struct sllist *link;
 };
 typedef struct sllist node;
+int count=1;
 node *start=NULL;
 node* getnode()
 {
@@ -54,6 +24,7 @@ void insertEND()
     if(start==NULL)
     {
         start=t;
+        count++;
         return;
     }
     while(temp->link!=NULL)
@@ -61,6 +32,7 @@ void insertEND()
         temp=temp->link;
     }
     temp->link=t;
+     count++;
     
 }
 void insertBEG()
@@ -71,31 +43,40 @@ void insertBEG()
     {
         start=t;
         return;
+        count++;
     }
     t->link=start;
-    start=t;
+    start=t; 
+    count++;
+
     
 }
 void insertPOS()
 {
     node *t,*temp=start;
     t=getnode();
-    int pos,count=1;
+    int pos,count1=1;
     printf("Enter the pos:");
     scanf("%d",&pos);
+    if(pos>count)
+    {
+        printf("Wrong POSITION");
+        return;
+    }
     
-    while(count!=pos)
+    while(count1!=pos-1)
     {
         temp=temp->link;
-        count++;
+        count1++;
     }
-    t->link=temp->link;
-    temp->link=t;
+   t->link=temp->link;
+   temp->link=t;
+    count++;
 }
 void deletEND()
 {
     node *temp=start,*prev;
-    if(start==NULL)
+    if(count==1)
     {
         printf("EMPTY");
         return;
@@ -106,34 +87,59 @@ void deletEND()
     }
     printf("\nDeleted ele is:%d\n",temp->data);
     prev->link=NULL;
+    count--;
     free(temp);
 }
 void deleteBEG()
 {
     node *temp=start;
-    if(start==NULL)
+    if(count==1)
     {
         printf("EMPTY");
         return;
     }
     printf("\nDeleted ele is:%d\n",temp->data);
     start=temp->link;
+    count--;
     free(temp);
 }
 void deletePOS()
 {
     node *temp=start,*prev;
-    int count=1,pos;
+    int count1=1,pos;
+    if(count==1)
+    {
+        printf("\nNO ELEMENT TO DELETE");
+        return;
+    }
     printf("\nEnter the POS:");
     scanf("%d",&pos);
-    while(count!=pos)
+    
+    if(pos>count)
+    {
+        printf("\nWRONG POSITION");
+        return;
+    }
+    while(count1!=pos)
     {   prev=temp;
         temp=temp->link;
-        count++;
+        count1--;
     }
     printf("\nDeleted ele is:%d\n",temp->data);
     prev->link=temp->link;
+    count--;
     free(temp);
+}
+void Dispaly()
+{
+    node *temp=start;
+    int count1=0;
+    while(count1!=count)
+    {
+        printf("\t%d",temp->data);
+        temp=temp->link;
+        count1++;
+    }
 }
 void main()
 {   int n;
@@ -155,7 +161,11 @@ void main()
                     break;
             case 6:deletePOS();
                     break;
-            
+            case 7:Dispaly();
+                    break;
+            case 8:exit(0);
+            default:printf("Wrong Enter");
+                    
         }
     }
 }
