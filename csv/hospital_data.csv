@@ -1,0 +1,5 @@
+patient_id,name,date_of_birth,address,phone_number,email,insurance_provider,insurance_id,appointments,medical_records,bills
+1,John Doe,1980-01-01,123 Main St, Anytown, USA, 555-555-5555, johndoe@example.com, Aetna, 123456789,[],[],[]
+2,Jane Smith,1975-07-15,456 Elm St, Anytown, USA, 555-123-4567, janesmith@example.com, Blue Cross Blue Shield, 987654321,[{"appointment_id":1, "doctor_id":10, "date":"2024-01-31", "time":"10:00", "purpose":"General checkup"}],[],[]
+3,Michael Lee,1990-10-26,789 Maple Ave, Anytown, USA, 555-765-4321, michaellee@example.com, UnitedHealthcare, ABC123,[],[{"record_id":1, "doctor_id":10, "date":"2024-01-31", "diagnosis":"Mild cold", "medication":"Over-the-counter pain relievers", "notes":"Rest and fluids recommended."}],[]]
+4,,,,,,"",[{"appointment_id":2, "doctor_id":20, "date":"2024-02-07", "time":"14:00", "purpose":"Dental checkup"}],[],[]

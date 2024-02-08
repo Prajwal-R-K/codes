@@ -22,17 +22,17 @@ class circle extends shape{
 class Triangle extends shape{
     int a1,a2,a3;
     Triangle(int a,int b,int c){
-a1=a;
-a2=b;
-a3=c;
-    }
+                a1=a;
+                a2=b;
+                a3=c;
+                    }
     void calculateArea()
         {int s=(a1+a2+a3)/3;
             System.out.println("Area="+Math.sqrt(s*(s-a1)*(s-a2)*(s-a3)));
         }
     
 
-    }
+    
     void calculatePerimeter()
     {
         System.out.println("Perimeter ="+(a1+a2+a3));

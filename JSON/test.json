@@ -1,0 +1,14 @@
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "age": 30,
+    "address": {
+      "street": "123 Main St",
+      "city": "Cityville",
+      "state": "Stateville",
+      "zipCode": "12345"
+    },
+    "isStudent": false,
+    "hobbies": ["reading", "hiking", "coding"]
+  }
+  
