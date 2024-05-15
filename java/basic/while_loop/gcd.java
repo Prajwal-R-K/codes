@@ -6,7 +6,7 @@ public class gcd {
     {
         int gcd=1,k=2;
         System.out.println("Enter the two numbers");
-        Scanner s=new Scanner(System.in);
+        Scanner s =new Scanner(System.in);
         int n1=s.nextInt();
         int n2=s.nextInt();
         while(k<=n1&&k<=n2)

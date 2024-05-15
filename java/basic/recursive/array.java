@@ -26,24 +26,24 @@ public class array {
 
 
 
-            public static void main(String[] args) {
-                int[] arr = {1, 2, 3};
-                System.out.println("Before: " + Arrays.toString(arr));
-                
-                // Calling a method with pass by reference
-                modifyArray(arr);
-                
-                System.out.println("After: " + Arrays.toString(arr));
+        public static void main(String[] args) {
+            int[] arr = {1, 2, 3};
+            System.out.println("Before: " + Arrays.toString(arr));
+            
+            // Calling a method with pass by reference
+            modifyArray(arr);
+            
+            System.out.println("After: " + Arrays.toString(arr));
+        }
+    
+        public static void modifyArray(int[] array) {
+            for (int i = 0; i < array.length; i++) {
+                array[i] *= 2;
             }
-        
-            public static void modifyArray(int[] array) {
-                for (int i = 0; i < array.length; i++) {
-                    array[i] *= 2;
-                }
-                System.out.println("Inside method: " + Arrays.toString(array));
-            }
-        
-        
+            System.out.println("Inside method: " + Arrays.toString(array));
+        }
+    
+    
     
 }
         
