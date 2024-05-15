@@ -8,7 +8,8 @@ int count=0;
 void enqueue()
 {
     int item ;
-    if(count==size){
+    if(count==size)
+    {
         printf("queue full : update size");
         size++;
         q=(int*)realloc(q,size*sizeof(int));
@@ -36,6 +37,7 @@ int main()
 {
     q=(int*)malloc(sizeof(int));
     enqueue();
+ 
     enqueue();
     enqueue();
     dequeue();

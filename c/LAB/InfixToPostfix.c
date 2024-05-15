@@ -38,7 +38,7 @@ void convert(char in[20],char postfix[20])
             case '(':push(sym);break;
             case ')':while(stack[top]!='(')
                         postfix[j++]=pop();
-                    pop();                     
+                     pop();                     
                             break;
             case '^':
             case '*':
@@ -46,7 +46,7 @@ void convert(char in[20],char postfix[20])
             case '+':
             case '-':while(prec(sym)<=prec(stack[top]))
                         postfix[j++]=pop();
-                    push(sym);
+                     push(sym);
                     break;
             default:postfix[j++]=sym;
 
@@ -56,11 +56,10 @@ void convert(char in[20],char postfix[20])
             postfix[j++]=pop();
         postfix[j]='\0';
         
-    
 }
 void main()
 {
-    char infix[20];char postfix[20];
+    char infix[20], postfix[20];
     printf("\nEnter infix expression:");
     gets(infix);
     convert(infix,postfix);

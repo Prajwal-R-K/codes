@@ -7,7 +7,8 @@ void TowerOf(int n,char a,char b,char c)
         printf("\nMove from %c to %c",a,c);
         count++;
     }
-    else{
+    else
+    {
         TowerOf(n-1,a,c,b);
         printf("\nMove from %c to %c",a,c);
         count++;

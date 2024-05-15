@@ -1,28 +1,47 @@
 #include<stdio.h>
-#include<stdlib.h>
-int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
-   returnSize=(int*)malloc(2*sizeof(int));
-    for(int i=0;i<numsSize;i++)
-    {
-            if((nums[i]+nums[i+1])==target)
-            {
-                returnSize[0]=i;
-                returnSize[1]=i+1;
-
-                return returnSize;
-            }
-        
-        
-    }
-    return returnSize;
-}
-void main()
+#define size 10
+int top = -1;
+struct Tree
 {
-    int a[]={1,8,1};
-    int *b;
-    b=twoSum(a,3,9,b);
-     for (int i = 0; i < 2; i++) {
-        printf("%d ", b[i]);
-     }
-     prin
+int data;
+struct Tree *lptr, *rptr;
+};
+typedef struct Tree node;
+node *root,*stack[size];
+
+void push(node *temp) //function to push
+{
+if(top == size-1)
+{
+Printf("stack full");
+return;
+}
+stack[++top] = temp;
+}
+
+node *pop() //function to pop
+{
+if(top == – 1)
+{
+printf("stack empty");
+return;
+}
+return(stack[top--]);
+}
+
+void iterative_inorder(node *root)
+{
+node *cur = root;
+while(1)
+{
+while(cur!=NULL)
+{
+push(cur);
+cur=cur->lptr;
+}
+if(top == -1) break;
+cur = pop();
+printf("%d ", cur->data);
+cur=cur->rptr;
+}
 }

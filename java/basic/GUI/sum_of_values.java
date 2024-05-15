@@ -1,4 +1,4 @@
-package basic.GUI;  // Give (run java) not (run code)
+//package basic.GUI;  // Give (run java) not (run code)
 import javax.swing.JOptionPane;
 
 public class sum_of_values {

@@ -130,13 +130,28 @@ void deletePOS()
     count--;
     free(temp);
 }
+
+void reverse() {
+    node *prev = NULL;
+    node *current = start;
+    node *next = NULL;
+    
+    while (current != NULL) {
+        next = current->link; // Store the next node
+        current->link = prev; // Reverse the link
+        prev = current;       // Move pointers one position ahead
+        current = next;
+    }
+    start = prev; // Update start to point to the new first node
+}
+
 void Dispaly()
 {
     node *temp=start;
-    int count1=0;
+    int count1=1;
     while(count1!=count)
     {
-        printf("\t%d",temp->data);
+        printf("%d\t",temp->data);
         temp=temp->link;
         count1++;
     }
@@ -145,7 +160,7 @@ void main()
 {   int n;
     while(1)
     {
-        printf("\n1-insert at End\n2-Insert at Begin\n3-Insert at position\n4-Delete at End\n5-Delete at Begin\n6-Delete at position\n7-Dispaly\n8-Exit");
+        printf("\n1-insert at End\n2-Insert at Begin\n3-Insert at position\n4-Delete at End\n5-Delete at Begin\n6-Delete at position\n7-Dispaly\n8-Reverse\n9-Exit\n");
         scanf("%d",&n);
         switch(n)
         {
@@ -163,8 +178,10 @@ void main()
                     break;
             case 7:Dispaly();
                     break;
-            case 8:exit(0);
-            default:printf("Wrong Enter");
+            case 8:reverse();
+                    break;
+            case 9:exit(0);
+            default:printf("Wrong Entry");
                     
         }
     }

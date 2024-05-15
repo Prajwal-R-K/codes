@@ -1,5 +1,3 @@
-package basic.method;
-
 public class prime_nos {
     public static void main(String[] args) {
         System.out.println("The prime numbers between '20' and '50'");

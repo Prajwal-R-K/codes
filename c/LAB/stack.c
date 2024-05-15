@@ -42,7 +42,7 @@ void display()
 void palindrome()
 {   top=-1;
     int n,num,copy;
-    printf("\nENter the number:");
+    printf("\nEnter the number:");
     scanf("%d",&num);
     copy=num;
     while(copy!=0)

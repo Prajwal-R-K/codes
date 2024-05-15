@@ -13,6 +13,7 @@ cal* create()
 void read(cal *d)
 {
     int i,flag;
+    
     char temp[50];
     for(i=0;i<7;i++)
     {
