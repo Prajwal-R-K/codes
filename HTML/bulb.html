@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Light Bulb On/Off Example</title>
+ <style>
+ #lightBulb {
+ width: 200px;
+ height: 300px;
+ }
+ </style>
+</head>
+<body>
+ <h1>Light Bulb On/Off Example</h1>
+ <img id="lightBulb" src="pexels-photo-577514.webp" alt="Light Bulb">
+ <br>
+ <button onclick="turnOn()">Turn On</button>
+ <button onclick="turnOff()">Turn Off</button>
+ <script>
+ function turnOn() {
+ document.getElementById("lightBulb").src = "download_on.jpg";
+ }
+ function turnOff() {
+ document.getElementById("lightBulb").src = "download_off.jpg";
+ }
+ </script>
+</body>
+</html>
