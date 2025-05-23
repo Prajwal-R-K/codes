@@ -1,0 +1,120 @@
+1)  JavaScript Can Change HTML Content
+    JavaScript Can Change HTML Attribute Values
+    JavaScript Can Change HTML Styles (CSS)
+    JavaScript Can Hide HTML Elements
+    JavaScript Can Show HTML Elements
+2) where you can write the code
+3) Display Possibilities
+    innerhtml
+    document.write()
+    window.alert()
+    console.log()
+    ...
+4) Variables
+5) Operators
+6) Data Types
+7) String Methods:
+
+    charAt(): Returns the character at a specific index.
+    charCodeAt(): Returns the Unicode value of a character.
+    concat(): Joins two or more strings.
+    includes(): Checks if a string contains a substring.
+    endsWith(): Checks if a string ends with a specified substring.
+    indexOf(): Returns the first occurrence of a substring.
+    lastIndexOf(): Returns the last occurrence of a substring.
+    localeCompare(): Compares two strings for sorting.
+    match(): Matches a string against a regular expression.
+    repeat(): Repeats a string a specified number of times.
+    replace(): Replaces the first occurrence of a substring.
+    replaceAll(): Replaces all occurrences of a substring.
+    slice(): Extracts a section of a string.
+    split(): Splits a string into an array.
+    startsWith(): Checks if a string starts with a specified substring.
+    substring(): Extracts a part of a string between two indices.
+    toLowerCase() and toUpperCase(): Convert a string to lowercase or uppercase.
+    trim(), trimStart(), trimEnd(): Remove whitespace.
+    valueOf(): Returns the primitive value of a string object.
+8) Numbers
+9) array
+    Array Creation:
+    Using literals, new Array(), or Array.of().
+
+    Array Properties:
+    length: Gives the number of elements.
+
+    Array Methods:
+    push() / pop(): Add/remove elements from the end.
+    shift() / unshift(): Add/remove elements from the start.
+    concat(): Combine arrays.
+    join(): Join elements into a string.
+    slice(): Extract part of an array.
+    splice(): Add/remove elements.
+    indexOf() / lastIndexOf(): Find indices.
+    includes(): Check for the existence of an element.
+    reverse() / sort(): Reverse or sort the array.
+    map(): Transform elements.
+    filter(): Select elements based on a condition.
+    reduce(): Aggregate array values.
+    find() / findIndex(): Locate elements.
+    every() / some(): Test conditions.
+    flat() / flatMap(): Flatten nested arrays.
+
+    Iteration:
+    Using for loops, for...of, and forEach.
+10) object
+
+11) Conditional statements
+12) Loops
+
+    for Loop:
+    Used for iterating a set number of times.
+    Syntax: for (initialization; condition; increment) {}.
+
+    while Loop:
+    Repeats as long as the condition is true.
+
+    do-while Loop:
+    Executes at least once, then continues if the condition is true.
+
+    for...of Loop:
+    Iterates over iterable objects (arrays, strings, sets).
+
+    for...in Loop:
+    Iterates over the properties of an object.
+
+    Nested Loops:
+    Loops inside loops for multidimensional operations.
+
+    break Statement:
+    Exits the loop immediately.
+
+    continue Statement:
+    Skips the current iteration and moves to the next.
+
+    Iterating Arrays:
+    Use loops like for, forEach, and functional methods like map and reduce.
+13) Function
+14) DOM (Finding Elements)
+
+    Finding by ID (getElementById):
+    Finds a single element with the specified ID.
+
+    Finding by Tag Name (getElementsByTagName):
+    Returns a live collection of all elements with the specified tag name.
+    Use elements[0] to access the first element.
+
+    Finding by Class Name (getElementsByClassName):
+    Returns a live collection of elements with the specified class.
+
+    Finding by CSS Selectors (querySelector and querySelectorAll):
+    querySelector: Returns the first matching element.
+    querySelectorAll: Returns a static collection of all matching elements.
+
+    Finding by HTML Object Collections:
+    document.forms: Collection of all <form> elements.
+    document.images: Collection of all <img> elements.
+
+    Traversing and Styling:
+    Use Array.from() to convert live collections into arrays for easier iteration.
+    Modify the styles of the selected elements dynamically.
+15) Events

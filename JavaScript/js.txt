@@ -1,0 +1,59 @@
+https://dev.to/cliff123tech/javascript-from-beginner-to-master-tutorial-series-37fe
+
+
+1)Introduction
+2)Js code in html file and external js file(.js)
+3)How to run js code in console (Go to browser -inspect-console)
+4)JavaScript Display Possibilities
+   innerhtml
+   document.write()  -- Drawback(warning)
+   alert()
+   console.log()
+
+   prompt()
+   confirm()
+   console.warn()
+   console.error()
+   console.info()
+   print()
+5)Comments
+6)Semicolon
+7)Variables and Data Types(8)-Primitive(String, Number, Bigint, Boolean, Null, Undefined, Symbol) and Non-Primitive(Object, Array, Function)-Refernce DataType
+    Automatic
+    var
+    let
+    const
+8)Operators
+    Arithmetic
+        +, -, *, /, % , **, ++, --
+    Assignment
+        =, +=, -=, *=, /=, %=, **=, ++, --
+    Comparison
+        ==, !=, ===, !==, >, <, >=, <=
+    logical 
+        &&, ||, !
+    logical assignment
+        &&=, ||=, ?=
+    Type Operators
+        typeof - Returns the type of a variable
+        instanceof - Returns true if an object is an instance of a class(Object Type)
+    Bitwise
+        &,|, ~, ^, <<, >>, >>>(unsigned right shift)
+    Ternary Operator
+        (condition)?(exp1):(exp2)
+9)Conditional Statements
+    if
+    else
+    else if
+    switch
+10)Loops
+    for
+    for in - for in statement loops through the properties of an Object (or) properties of an Array:
+    for of - for of statement loops through the values of an iterable object( Arrays, Strings, Maps, NodeLists, and more)
+    forEach() - forEach(func..) method calls a function (a callback function) once for each array element.
+    while
+    do while
+11) Break and Continue Statements
+    break - break statement used to jump out of a loop (or) ends the 
+    continue - continue statement skips the rest of the code inside a loop for the current iteration only.
+12)Functions

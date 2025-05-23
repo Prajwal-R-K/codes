@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extended JavaScript Events</title>
+    <style>
+        #hover-box {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            text-align: center;
+            line-height: 200px;
+            margin: 10px 0;
+        }
+        #focus-box {
+            border: 2px solid green;
+            padding: 10px;
+        }
+        #button-style {
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Click Event -->
+    <button id="click-button" onclick="alert('Button clicked!')">Click Me</button>
+
+    <!-- 2. Page Load Event -->
+    <h3>Page Load Event</h3>
+    <p id="load-message">The page is loading...</p>
+
+    <!-- 3. Image Load Event -->
+    <h3>Image Load Event</h3>
+    <img id="image" src="https://via.placeholder.com/150" alt="Example Image" onload="console.log('Image has loaded.')" />
+
+    <!-- 4. Mouseover Event -->
+    <div id="hover-box" onmouseover="console.log('Mouse is over the box!')">Hover Over Me</div>
+
+    <!-- 5. Input Change Event -->
+    <h3>Input Change Event</h3>
+    <input type="text" id="input-field" placeholder="Type something..." onchange="console.log('Input value changed: ' + this.value)" />
+
+    <!-- 6. Form Submit Event -->
+    <h3>Form Submit Event</h3>
+    <form id="myForm" onsubmit="event.preventDefault(); alert('Form submitted!');">
+        <input type="text" name="name" placeholder="Enter name" />
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- 7. Keydown Event -->
+    <h3>Keydown Event</h3>
+    <input type="text" id="keypress-field" placeholder="Press any key..." onkeydown="console.log('Key pressed: ' + event.key)" />
+
+    <!-- 8. Focus and Blur Events -->
+    <h3>Focus and Blur Events</h3>
+    <input type="text" id="focus-box" placeholder="Focus and Blur Me" 
+        onfocus="console.log('Input field focused!')" 
+        onblur="console.log('Input field lost focus!')" />
+
+    <!-- 9. Focus Event on Button -->
+    <h3>Focus on Button</h3>
+    <button id="button-focus" onfocus="console.log('Button focused!')">Focus on Me</button>
+
+    <!-- 10. Mouseout Event -->
+    <h3>Mouseout Event</h3>
+    <div id="mouseout-box" onmouseout="console.log('Mouse left the box!')" style="width: 200px; height: 200px; background-color: lightgray; text-align: center; line-height: 200px;">
+        Mouse Out Example
+    </div>
+
+    <!-- 11. Dblclick Event -->
+    <h3>Double Click Event</h3>
+    <button id="dblclick-button" ondblclick="alert('Button Double-clicked!')" style="padding: 10px; border: 1px solid #ccc;">Double Click Me</button>
+
+    <!-- 12. Change Event on Select -->
+    <h3>Change Event on Select</h3>
+    <select id="select-box" onchange="console.log('Selected option: ' + this.value)">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+    </select>
+
+    <!-- 13. Mousemove Event -->
+    <h3>Mousemove Event</h3>
+    <div id="mousemove-box" onmousemove="console.log('Mouse moved in the box!')" style="width: 200px; height: 200px; background-color: lightblue; text-align: center; line-height: 200px;">
+        Move Mouse Here
+    </div>
+
+    <!-- 14. Scroll Event -->
+    <h3>Scroll Event</h3>
+    <div id="scroll-box" onscroll="console.log('Scrolled!')" style="width: 300px; height: 100px; overflow: auto; background-color: #f1f1f1;">
+        <div style="height: 500px; padding: 10px;">Scroll inside this box to trigger the scroll event!</div>
+    </div>
+
+    <script>
+        // No need to use addEventListener here as we are using inline event attributes
+    </script>
+
+</body>
+</html>

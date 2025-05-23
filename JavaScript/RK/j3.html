@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Display Properties</title>
+    <style>
+        #outputArea {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Display Properties</h1>
+
+    <!-- Buttons to Trigger Various Display Methods -->
+    <button id="innerHtmlButton">Write to an HTML Element</button>
+    <button id="documentWriteButton">Write to the HTML Output</button>
+    <button id="alertButton">Show Alert Box</button>
+    <button id="consoleLogButton">Write to the Console</button>
+    <button id="windowWriteButton">Write to a New Browser Window</button>
+    <button id="printButton">Print Page</button>
+    <button id="consoleWarnButton">Show Console Warning</button>
+    <button id="consoleErrorButton">Show Console Error</button>
+
+    <div id="outputArea">
+        <p id="htmlOutput">This area will be updated with innerHTML.</p>
+    </div>
+
+    <script>
+        // Write into an HTML element using innerHTML
+        document.getElementById('innerHtmlButton').onclick = function() {
+            document.getElementById('htmlOutput').innerHTML = "This content was updated using innerHTML.";
+        };
+
+        // Write into the HTML output using document.write()
+        document.getElementById('documentWriteButton').onclick = function() {
+            document.write("This is written using document.write(). (This overwrites the page!)");
+        };
+
+        // Write into an alert box using window.alert()
+        document.getElementById('alertButton').onclick = function() {
+            alert("This is an alert box displayed using JavaScript!");
+        };
+
+        // Write into the console using console.log()
+        document.getElementById('consoleLogButton').onclick = function() {
+            console.log("This message is logged to the browser console.");
+        };
+
+        // Write into a new browser window
+        document.getElementById('windowWriteButton').onclick = function() {
+            let newWindow = window.open("", "_blank", "width=400,height=300");
+            newWindow.document.write("<h2>This is written in a new browser window!</h2>");
+        };
+
+        // Print the current page
+        document.getElementById('printButton').onclick = function() {
+            window.print();
+        };
+
+        // Show a warning in the console
+        document.getElementById('consoleWarnButton').onclick = function() {
+            console.warn("This is a warning displayed in the console.");
+        };
+
+        // Show an error in the console
+        document.getElementById('consoleErrorButton').onclick = function() {
+            console.error("This is an error message displayed in the console.");
+        };
+    </script>
+</body>
+</html>
